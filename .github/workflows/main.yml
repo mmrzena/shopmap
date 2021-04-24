@@ -26,8 +26,8 @@ jobs:
       - name: Build project
         run: npm build
 
-      - name: FTP Deploy to WP Engine (Staging)
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      - name: Deploy build to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           ftp-server: sftp://ftp.myshoptet.com
           ftp-username: michal_381485
