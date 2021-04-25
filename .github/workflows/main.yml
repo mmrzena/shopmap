@@ -27,6 +27,9 @@ jobs:
 
       - name: Build project
         run: npm run build
+      
+      - name: git reset --hard
+        run: git reset --hard
 
       - name: Deploy build to FTP
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
