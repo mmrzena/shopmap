@@ -239,28 +239,4 @@ export const shops = [
 		lat: 50.4161078,
 		lng: 16.1615911,
 	},
-	{
-		name: 'Fantazie',
-		address: 'Sokolská 263/22, Česká Lípa',
-		lat: 50.6850158,
-		lng: 14.5356939,
-	},
-	{
-		name: 'Zdravá výživa',
-		address: 'Tůmova 122, Vysoké Mýto',
-		lat: 49.9510992,
-		lng: 16.1606867,
-	},
-	{
-		name: 'Zdravá výživa',
-		address: 'Pekelská 76, Vamberk',
-		lat: 50.1183611,
-		lng: 16.2908856,
-	},
-	{
-		name: 'Zdraví ve mlýně',
-		address: 'Husova 86, Choceň',
-		lat: 50.0009631,
-		lng: 16.2267606,
-	},
 ]
