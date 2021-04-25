@@ -34,4 +34,5 @@ jobs:
           ftp-server: sftp://ftp.myshoptet.com/js/
           ftp-username: michal_381485
           ftp-password: ${{ secrets.STAGING_FTP_PASSWORD }}
+          local-dir: ./public/build/
           git-ftp-args: --insecure
