@@ -30,7 +30,7 @@ export const shops = [
 		lng: 15.1790094
 	},
 	{
-		name: 'Zde pro vás vyrábíme &#10084; test mapy',
+		name: 'Zde pro vás vyrábíme &#10084;',
 		address: '',
 		lat: 50.4401225,
 		lng: 15.3460308,
@@ -178,5 +178,89 @@ export const shops = [
 		address: 'Palackého 61, Jičín',
 		lat: 50.4374106,
 		lng: 15.3515061,
+	},
+	{
+		name: 'Fantazie',
+		address: 'Sokolská 263/22, Česká Lípa',
+		lat: 50.6850158,
+		lng: 14.5356939,
+	},
+	{
+		name: 'Zdravá výživa',
+		address: 'Tůmova 122, Vysoké Mýto',
+		lat: 49.9510992,
+		lng: 16.1606867,
+	},
+	{
+		name: 'Zdravá výživa',
+		address: 'Pekelská 76, Vamberk',
+		lat: 50.1183611,
+		lng: 16.2908856,
+	},
+	{
+		name: 'Zdraví ve mlýně',
+		address: 'Husova 86, Choceň',
+		lat: 50.0009631,
+		lng: 16.2267606,
+	},
+	{
+		name: 'Zdravá výživa "U tří vegetariánů"',
+		address: 'ul. Mistra Jar. Kociána 31, Ústí n/Orlicí',
+		lat: 49.9746144,
+		lng: 16.3944108,
+	},
+	{
+		name: 'Zdravá výživa',
+		address: 'Purkyňova 109, Lanškroun ',
+		lat: 49.9120739,
+		lng: 16.6101944,
+	},
+	{
+		name: 'Zdravý obchůdek U Slavíka',
+		address: 'Masarykova třída 430/24, Teplice',
+		lat: 50.6423403,
+		lng: 13.8289056,
+	},
+	{
+		name: 'Zdravý obchůdek U Slavíka',
+		address: 'Špitálské nám. 3517/1a, Ústí n/Labem',
+		lat: 50.6628917,
+		lng: 14.0329444,
+	},
+	{
+		name: 'Vinotéka Natura - Grešík',
+		address: 'Březinova 399/2, Děčín',
+		lat: 50.7795428,
+		lng: 14.2169536,
+	},
+	{
+		name: 'Mlsná Farmářka',
+		address: 'Tyršova 63, Náchod',
+		lat: 50.4161078,
+		lng: 16.1615911,
+	},
+	{
+		name: 'Fantazie',
+		address: 'Sokolská 263/22, Česká Lípa',
+		lat: 50.6850158,
+		lng: 14.5356939,
+	},
+	{
+		name: 'Zdravá výživa',
+		address: 'Tůmova 122, Vysoké Mýto',
+		lat: 49.9510992,
+		lng: 16.1606867,
+	},
+	{
+		name: 'Zdravá výživa',
+		address: 'Pekelská 76, Vamberk',
+		lat: 50.1183611,
+		lng: 16.2908856,
+	},
+	{
+		name: 'Zdraví ve mlýně',
+		address: 'Husova 86, Choceň',
+		lat: 50.0009631,
+		lng: 16.2267606,
 	},
 ]
