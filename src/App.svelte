@@ -29,7 +29,7 @@ if (hasDiv) {
 	// load a tile layer
 	L.tileLayer('https://mapserver.mapy.cz/turist-m/{z}-{x}-{y}',
 	{
-		attribution: '<a href="https://o.seznam.cz/">© dddSeznam.cz, a.s.</a> a OpenStreetMap',
+		attribution: '<a href="https://o.seznam.cz/">© Seznam.cz, a.s.</a> a OpenStreetMap',
 		maxZoom: 18,
 		minZoom: 8
 	}).addTo(mymap);

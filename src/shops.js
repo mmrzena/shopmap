@@ -30,7 +30,7 @@ export const shops = [
 		lng: 15.1790094
 	},
 	{
-		name: 'Zde pro vás vyrábíme &#10084;',
+		name: 'Zde pro vás vyrábíme &#10084; test mapy',
 		address: '',
 		lat: 50.4401225,
 		lng: 15.3460308,
