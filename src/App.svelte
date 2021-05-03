@@ -1,7 +1,9 @@
 <script lang="ts">
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet'
-import {shops} from './shops'
+// import {shops} from './shops'
+import shops from '../server/shops.json';
+import Form from './Form.svelte'
 
 import aramaraMarkerIcon from './aramara_marker.png'
 
@@ -37,3 +39,5 @@ if (hasDiv) {
 	shops.forEach((shop) => createMarker(shop))
 }
 </script>
+
+<Form />

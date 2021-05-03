@@ -7,7 +7,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import image from '@rollup/plugin-image';
-
+import json from 'rollup-plugin-json';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -78,7 +78,10 @@ export default {
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
 		production && terser(),
-		image()
+		image(),
+		json({
+      exclude: [ 'node_modules/**', ],
+    })
 	],
 	watch: {
 		clearScreen: false
