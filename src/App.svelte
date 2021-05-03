@@ -40,4 +40,6 @@ if (hasDiv) {
 }
 </script>
 
-<Form />
+{#if !window.location.href.startsWith('https://www.aramara.cz')}
+	<Form />
+{/if}
