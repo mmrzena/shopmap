@@ -42,6 +42,6 @@ if (hasDiv) {
 
 {#if !window.location.href.startsWith('https://www.aramara.cz')}
 	<Form />
+	<List />
 {/if}
 
-<List />
