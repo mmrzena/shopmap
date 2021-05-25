@@ -1,9 +1,9 @@
 <script lang="ts">
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet'
-// import {shops} from './shops'
 import shops from '../server/shops.json';
 import Form from './Form.svelte'
+import List from './List.svelte'
 
 import aramaraMarkerIcon from './aramara_marker.png'
 
@@ -19,7 +19,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const hasDiv = window.document.getElementById('shopmap')
 
 if (hasDiv) {
-	const mymap = L.map('shopmap').setView([50.4353, 15.3610], 9);
+	const mymap = L.map('shopmap').setView([50.4353, 15.3610], 8);
 	
 	const createMarker = ({name, address, lat, lng}) => {
 		const marker = L.marker([lat, lng]).addTo(mymap);
@@ -43,3 +43,5 @@ if (hasDiv) {
 {#if !window.location.href.startsWith('https://www.aramara.cz')}
 	<Form />
 {/if}
+
+<List />
