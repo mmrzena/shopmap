@@ -71,3 +71,11 @@ button:focus {
 	border-color: #666;
 }
 
+.popup_name {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+#shopmap {
+	height: 480px;
+}
