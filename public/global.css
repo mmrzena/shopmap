@@ -71,17 +71,3 @@ button:focus {
 	border-color: #666;
 }
 
-.popup_name {
-	font-size: 20px;
-	font-weight: 600;
-}
-
-#shopmap {
-	height: 480px;
-}
-
-.shops-list {
-	list-style-type: none;
-	margin-left: 0;
-	padding-left: 0;
-}
