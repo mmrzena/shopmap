@@ -5,7 +5,6 @@
 </script>
 
 <style>
-
 .shops-list {
 	list-style-type: none;
 	margin-left: 0;

@@ -39,15 +39,6 @@
 	<button class="button" on:click={postShop}>ADD TO SHOPS</button>
 </div>
 <style>
-
-.popup_name {
-	font-size: 20px;
-	font-weight: 600;
-}
-
-#shopmap {
-	height: 480px;
-}
 	.container {
 		/* display: flex; */
 		flex-direction: row;
