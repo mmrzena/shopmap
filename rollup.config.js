@@ -9,7 +9,7 @@ import css from 'rollup-plugin-css-only';
 import image from '@rollup/plugin-image';
 import json from 'rollup-plugin-json';
 
-const production = process.env.NODE_ENV === 'production';
+const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
 	let server;

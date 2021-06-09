@@ -14968,6 +14968,102 @@ var app = (function () {
     		address: "Moravská 90, Uherský Brod",
     		lng: 17.649802091945,
     		lat: 49.024921316212726
+    	},
+    	{
+    		name: "Zdravá výživa",
+    		address: "náměstí Komenského 77, Fulnek",
+    		lng: 17.9045246587257,
+    		lat: 49.712966637312554
+    	},
+    	{
+    		name: "Zdravá výživa",
+    		address: "Husova 1138, Žatec",
+    		lng: 13.539445247653829,
+    		lat: 50.320229945828835
+    	},
+    	{
+    		name: "Zdravá výživa",
+    		address: "Sušilovo náměstí 48, Rousínov",
+    		lng: 16.880863991187983,
+    		lat: 49.2028249633499
+    	},
+    	{
+    		name: "Dobrá zdravá potravinka",
+    		address: "Měšťanská 4, Hodonín",
+    		lng: 17.13131246876486,
+    		lat: 48.851736844146984
+    	},
+    	{
+    		name: "Koloniál \"U Lidky\"",
+    		address: "Předměstí 397, Strážnice",
+    		lng: 17.31547455236752,
+    		lat: 48.89990573503419
+    	},
+    	{
+    		name: "Zdravá výživa",
+    		address: "Masarykova 379, Strážnice",
+    		lng: 17.313552766332283,
+    		lat: 48.89927654496785
+    	},
+    	{
+    		name: "Dokola obchod bez obalu",
+    		address: "Husova 58, Slavkov u Brna",
+    		lng: 16.8779087752008,
+    		lat: 49.15396137263553
+    	},
+    	{
+    		name: "Natural life",
+    		address: "Moravská 81, Uherský Brod",
+    		lng: 17.64875976699728,
+    		lat: 49.02519517966491
+    	},
+    	{
+    		name: "Krajinka",
+    		address: "Sloupského 1197, Uherské Hradiště",
+    		lng: 17.457194519690006,
+    		lat: 49.069764063204005
+    	},
+    	{
+    		name: "Obchůdek Turzín",
+    		address: "Poštovní 244, Třinec",
+    		lng: 18.668642014951335,
+    		lat: 49.67999307313213
+    	},
+    	{
+    		name: "Zdravá výživa pro sebe",
+    		address: "Riegrova 23, Olomouc",
+    		lng: 17.24796824291892,
+    		lat: 49.59466710078664
+    	},
+    	{
+    		name: "Zdravá výživa Marco Polo",
+    		address: "Horní Česká 204, Znojmo",
+    		lng: 16.048892968830106,
+    		lat: 48.8583766928706
+    	},
+    	{
+    		name: "Voňavý krámek",
+    		address: "náměstí T.G.Masaryka 40, Moravský Krumlov",
+    		lng: 16.313831574871536,
+    		lat: 49.04920816562303
+    	},
+    	{
+    		name: "Ovoce zelenina - zdravá výživa",
+    		address: "T.Procházky 21, Ivančice",
+    		lng: 16.374899416161607,
+    		lat: 49.10312069497624
+    	},
+    	{
+    		name: "Zdravá výživa U Milušky",
+    		address: "8.května 15, Olomouc",
+    		lng: 17.249183691423507,
+    		lat: 49.59556713677584
+    	},
+    	{
+    		name: "Zdravá výživa Šafrán",
+    		address: "Fr.Palackého 1870, Frenštát pod Radhoštěm",
+    		lng: 18.213257769046734,
+    		lat: 49.54595303745375
     	}
     ];
 
