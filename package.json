@@ -8,7 +8,7 @@
     "server": "node server",
     "start": "sirv public",
     "validate": "svelte-check",
-    "push": "npm run build && git add . && git -m 'new shops' && git push"
+    "push": "npm run build && git add . && git commit -m 'new shops' && git push"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
