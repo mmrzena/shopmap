@@ -22,11 +22,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Install NPM packages
-        run: npm install
+      # - name: Install NPM packages
+      #   run: npm install
 
-      - name: Build project
-        run: npm run build
+      # - name: Build project
+      #   run: npm run build
       
       - name: git reset --hard
         run: git reset --hard
