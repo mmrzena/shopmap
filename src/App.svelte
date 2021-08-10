@@ -19,7 +19,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const hasDiv = window.document.getElementById('shopmap')
 
 if (hasDiv) {
-	const mymap = L.map('shopmap').setView([50.4353, 15.3610], 8);
+	const mymap = L.map('shopmap').setView([49.8426, 15.6920544], 8);
 	
 	const createMarker = ({name, address, lat, lng}) => {
 		const marker = L.marker([lat, lng]).addTo(mymap);
