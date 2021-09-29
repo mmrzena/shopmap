@@ -19,7 +19,7 @@
 	 */
 	}
 
-	.container {
+	.containerShopBlock {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -38,7 +38,7 @@
 
 <li>
 	<h3 class="city"><strong>{city}</strong></h3>
-	<div class="container">
+	<div class="containerShopBlock">
 		{#each addresses as item}
 			<div class="shopBlock">
 				<div class="name">{item.name}</div>
