@@ -1,9 +1,25 @@
 <script lang="ts">
 	import shops from '../server/shops.json';
+	import Shop from './Shop.svelte';
 
+	let searchPhrase = ''
 	const shopsToList = shops.filter((item) => !item.name.startsWith('Zde pro vás vyrábíme')).sort((item1, item2) => {
 		return item1.name.localeCompare(item2.name);
 	})
+	const shopsMap = shopsToList.reduce((acc, shop) => {
+		const address = shop.address.split(',')
+		const city = address[address.length - 1].trim()
+		address.pop()
+		const item = {name: shop.name, address: address.join(', ')}
+		if (acc[city]) {
+			acc[city].push(item)
+		} else {
+			acc[city] = [item]
+		}
+
+		return acc
+	}, {})
+
 </script>
 
 <style>
@@ -11,12 +27,16 @@
 	list-style-type: none;
 	margin-left: 0;
 	padding-left: 0;
+	/* display: flex;
+	flex-wrap: wrap; */
 }
 
 </style>
 
+<input bind:value={searchPhrase} />
+
 <ul class="shops-list">
-	{#each shopsToList as item}
-	<li><strong>{item.name}</strong>, {item.address}</li>
+	{#each Object.keys(shopsMap).filter((city) => city.includes(searchPhrase)) as key}
+		<Shop city={key} addresses={shopsMap[key]} />
 	{/each}
 </ul>
