@@ -8,7 +8,7 @@
 		/* border: 1px solid red; */
 		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
   	/* transition: 0.3s; */
-		padding: 10px 20px;
+		padding: 5px 10px;
 		margin-right: 20px;
 		border-radius: 6px;
 		font-size: 18px;
@@ -31,7 +31,7 @@
 	}
 
 	.city {
-		margin-top: 30px;
+		margin-top: 25px;
 		margin-bottom: 5px;
 	}
 </style>

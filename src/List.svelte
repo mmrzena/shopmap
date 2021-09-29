@@ -20,6 +20,14 @@
 		return acc
 	}, {})
 
+	const orderedShopsMap = Object.keys(shopsMap).sort().reduce(
+  (obj, key) => { 
+    obj[key] = shopsMap[key]; 
+    return obj;
+  }, 
+  {}
+);
+
 </script>
 
 <style>
@@ -36,7 +44,7 @@
 <input bind:value={searchPhrase} />
 
 <ul class="shops-list">
-	{#each Object.keys(shopsMap).filter((city) => city.includes(searchPhrase)) as key}
+	{#each Object.keys(orderedShopsMap).filter((city) => city.includes(searchPhrase)) as key}
 		<Shop city={key} addresses={shopsMap[key]} />
 	{/each}
 </ul>
