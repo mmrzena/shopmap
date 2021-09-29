@@ -2,7 +2,6 @@
 	import shops from '../server/shops.json';
 	import Shop from './Shop.svelte';
 
-	let searchPhrase = ''
 	const shopsToList = shops.filter((item) => !item.name.startsWith('Zde pro vás vyrábíme')).sort((item1, item2) => {
 		return item1.name.localeCompare(item2.name);
 	})
@@ -41,10 +40,8 @@
 
 </style>
 
-<input bind:value={searchPhrase} />
-
 <ul class="shops-list">
-	{#each Object.keys(orderedShopsMap).filter((city) => city.includes(searchPhrase)) as key}
+	{#each Object.keys(orderedShopsMap) as key}
 		<Shop city={key} addresses={shopsMap[key]} />
 	{/each}
 </ul>
