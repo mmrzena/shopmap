@@ -16,7 +16,14 @@ const DefaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
+function insertAfter(referenceNode, newNode) {
+  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
 const hasDiv = window.document.getElementById('shopmap')
+
+let el
+  // $: if (el) console.log(el.innerHTML)
 
 if (hasDiv) {
 	const mymap = L.map('shopmap').setView([49.8426, 15.6920544], 8);
@@ -38,10 +45,18 @@ if (hasDiv) {
 	
 	shops.forEach((shop) => createMarker(shop))
 }
+
+$: if (el && hasDiv) {
+	// console.log(el)
+	// hasDiv.append(el)
+	insertAfter(hasDiv, el)
+}
 </script>
 
 {#if !window.location.href.startsWith('https://www.aramara.cz')}
 	<Form />
 {/if}
-<List />
+<div bind:this={el}>
+	<List />
+</div>
 
