@@ -48,7 +48,7 @@
 
 <h3>Vyhledávání</h3>
 <input bind:value={searchValue} class='form-control' placeholder="Zadejte název města nebo obchodu" />
-<ul class="shops-list">
+<ul class="shops-list" id="shops-list">
 	{#each Object.keys(orderedShopsMap) as key}
 		<Shop city={key} addresses={shopsMap[key]} />
 	{/each}
