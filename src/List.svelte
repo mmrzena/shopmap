@@ -1,8 +1,8 @@
 <script lang="ts">
-	import shops from '../server/shops.json';
+	import {shops} from './store.js'
 	import Shop from './Shop.svelte';
 
-	const shopsToList = shops.filter((item) => !item.name.startsWith('Zde pro vás vyrábíme')).sort((item1, item2) => {
+	const shopsToList = $shops.filter((item) => !item.name.startsWith('Zde pro vás vyrábíme')).sort((item1, item2) => {
 		return item1.name.localeCompare(item2.name);
 	})
 
@@ -10,6 +10,7 @@
 	$: filteredShops = shopsToList.filter((shop) => 
 		shop.name.toLowerCase().includes(searchValue.toLowerCase()) ||
 		shop.address.toLowerCase().includes(searchValue.toLowerCase()))
+	
 
 	$: shopsMap = filteredShops.reduce((acc, shop) => {
 		const address = shop.address.split(',')
@@ -33,6 +34,10 @@
   {}
 );
 
+const onChange = (e) => {
+	shops.set(filteredShops)
+}
+
 </script>
 
 <style>
@@ -47,7 +52,7 @@
 </style>
 
 <h3>Vyhledávání</h3>
-<input bind:value={searchValue} class='form-control' placeholder="Zadejte název města nebo obchodu" />
+<input bind:value={searchValue} on:input={onChange} class='form-control' placeholder="Zadejte název města nebo obchodu" />
 <ul class="shops-list" id="shops-list">
 	{#each Object.keys(orderedShopsMap) as key}
 		<Shop city={key} addresses={shopsMap[key]} />

@@ -1,9 +1,10 @@
 <script lang="ts">
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet'
-import shops from '../server/shops.json';
+// import shops from '../server/shops.json';
 import Form from './Form.svelte'
 import List from './List.svelte'
+import {shops} from './store.js'
 
 import aramaraMarkerIcon from './aramara_marker.png'
 
@@ -16,22 +17,23 @@ const DefaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
-function insertAfter(referenceNode, newNode) {
-  referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-}
-
 const hasDiv = window.document.getElementById('shopmap')
 const hasDicks = window.document.getElementById('dicks')
 
+let createMarker = (props) => {}
+const markers = []
+let myMap;
 if (hasDiv) {
-	const mymap = L.map('shopmap').setView([49.8426, 15.6920544], 8);
+	myMap = L.map('shopmap').setView([49.8426, 15.6920544], 8);
+
 	
-	const createMarker = ({name, address, lat, lng}) => {
-		const marker = L.marker([lat, lng]).addTo(mymap);
+	createMarker = ({name, address, lat, lng}) => {
+		const marker = L.marker([lat, lng]).addTo(myMap);
 		const popup = L.popup()
 		.setLatLng([lat, lng])
 		.setContent(`<p class="popup_name">${name}</p><p>${address}</p>`)
 		marker.bindPopup(popup);
+		markers.push(marker)
 	}
 	// load a tile layer
 	L.tileLayer('https://mapserver.mapy.cz/turist-m/{z}-{x}-{y}',
@@ -39,10 +41,14 @@ if (hasDiv) {
 		attribution: '<a href="https://o.seznam.cz/">© Seznam.cz, a.s.</a> a OpenStreetMap',
 		maxZoom: 18,
 		minZoom: 8
-	}).addTo(mymap);
-	
-	shops.forEach((shop) => createMarker(shop))
+	}).addTo(myMap);
 }
+
+$: if (hasDiv) {
+	markers.forEach((marker) => myMap.removeLayer(marker))
+	$shops.forEach((shop) => createMarker(shop))
+}
+
 </script>
 
 {#if !window.location.href.startsWith('https://www.aramara.cz')}
