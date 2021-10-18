@@ -45,8 +45,10 @@ if (hasDiv) {
 }
 </script>
 
-{#if hasDicks}
+{#if !window.location.href.startsWith('https://www.aramara.cz')}
 	<Form />
+{/if}
+{#if hasDicks}
 	<List />
 {/if}
 

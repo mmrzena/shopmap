@@ -5,7 +5,13 @@
 	const shopsToList = shops.filter((item) => !item.name.startsWith('Zde pro vás vyrábíme')).sort((item1, item2) => {
 		return item1.name.localeCompare(item2.name);
 	})
-	const shopsMap = shopsToList.reduce((acc, shop) => {
+
+	let searchValue = ''
+	$: filteredShops = shopsToList.filter((shop) => 
+		shop.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+		shop.address.toLowerCase().includes(searchValue.toLowerCase()))
+
+	$: shopsMap = filteredShops.reduce((acc, shop) => {
 		const address = shop.address.split(',')
 		const city = address[address.length - 1].trim()
 		address.pop()
@@ -19,7 +25,7 @@
 		return acc
 	}, {})
 
-	const orderedShopsMap = Object.keys(shopsMap).sort().reduce(
+	$: orderedShopsMap = Object.keys(shopsMap).sort().reduce(
   (obj, key) => { 
     obj[key] = shopsMap[key]; 
     return obj;
@@ -40,6 +46,8 @@
 
 </style>
 
+<h3>Vyhledávání</h3>
+<input bind:value={searchValue} class='form-control' placeholder="Zadejte název města nebo obchodu" />
 <ul class="shops-list">
 	{#each Object.keys(orderedShopsMap) as key}
 		<Shop city={key} addresses={shopsMap[key]} />
