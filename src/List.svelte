@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {shops} from './store.js'
+	import {shops, allShops} from './store.js'
 	import Shop from './Shop.svelte';
 
 	const shopsToList = $shops.filter((item) => !item.name.startsWith('Zde pro vás vyrábíme')).sort((item1, item2) => {
@@ -49,6 +49,10 @@ const onChange = (e) => {
 	flex-wrap: wrap; */
 }
 
+.invisibleNumberOfShops {
+	display: none;
+}
+
 </style>
 
 <h3>Vyhledávání</h3>
@@ -58,3 +62,4 @@ const onChange = (e) => {
 		<Shop city={key} addresses={shopsMap[key]} />
 	{/each}
 </ul>
+<span class="invisibleNumberOfShops" id="invisibleNumberOfShops" data-numberOfShops={$allShops.length} />
