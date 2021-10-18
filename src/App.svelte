@@ -21,6 +21,7 @@ function insertAfter(referenceNode, newNode) {
 }
 
 const hasDiv = window.document.getElementById('shopmap')
+const hasDicks = window.document.getElementById('dicks')
 
 if (hasDiv) {
 	const mymap = L.map('shopmap').setView([49.8426, 15.6920544], 8);
@@ -44,7 +45,7 @@ if (hasDiv) {
 }
 </script>
 
-{#if !window.location.href.startsWith('https://www.aramara.cz')}
+{#if hasDicks}
 	<Form />
 	<List />
 {/if}
