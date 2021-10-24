@@ -24,7 +24,7 @@ let createMarker = (props) => {}
 const markers = []
 let myMap;
 if (hasDiv) {
-	myMap = L.map('shopmap').setView([49.8426, 15.6920544], 8);
+	myMap = L.map('shopmap').setView([49.9526, 15.6920544], 7);
 
 	
 	createMarker = ({name, address, lat, lng}) => {
@@ -40,7 +40,7 @@ if (hasDiv) {
 	{
 		attribution: '<a href="https://o.seznam.cz/">© Seznam.cz, a.s.</a> a OpenStreetMap',
 		maxZoom: 18,
-		minZoom: 8
+		minZoom: 7,
 	}).addTo(myMap);
 }
 

@@ -2,9 +2,9 @@
 	import {shops, allShops} from './store.js'
 	import Shop from './Shop.svelte';
 
-	const shopsToList = $shops.filter((item) => !item.name.startsWith('Zde pro vás vyrábíme')).sort((item1, item2) => {
-		return item1.name.localeCompare(item2.name);
-	})
+	const shopsToList = $shops.
+		filter((item) => !item.name.startsWith('Zde pro vás vyrábíme'))
+		.sort(({ name: name1 }, {name: name2}) => name1.localeCompare(name2, 'cs'))
 
 	let searchValue = ''
 	$: filteredShops = shopsToList.filter((shop) => 
@@ -26,7 +26,7 @@
 		return acc
 	}, {})
 
-	$: orderedShopsMap = Object.keys(shopsMap).sort().reduce(
+	$: orderedShopsMap = Object.keys(shopsMap).sort((a, b) => a.localeCompare(b, 'cs')).reduce(
   (obj, key) => { 
     obj[key] = shopsMap[key]; 
     return obj;

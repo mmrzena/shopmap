@@ -17,8 +17,6 @@ app.use(bodyParser.json());
 
 app.use('/addShop', (req, res, next) => {
   const body = req.body
-	// const shopsArray = JSON.parse(shopsJson)
-	// console.log(shopsArray)
 	shopsJson.push(body)
 	const jsonShops = JSON.stringify(shopsJson);
 	console.log(jsonShops)

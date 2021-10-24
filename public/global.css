@@ -6,8 +6,8 @@ body {
 }
 
 #myshopmap {
-	height: 718px;
-	max-width: 1200px;
+	height: 418px;
+	max-width: 800px;
 }
 
 body {
@@ -77,5 +77,6 @@ button:focus {
 }
 
 #shopmap {
-	height: 718px;
+	height: 500px;
+	max-width: 900px;
 }
