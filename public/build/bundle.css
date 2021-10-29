@@ -1,4 +1,4 @@
-.container.svelte-4wct7d{flex-direction:row;justify-content:space-between}.data_list.svelte-4wct7d{list-style:none;display:inline-block}.button.svelte-4wct7d{background-color:transparent;border:3px solid purple}.inputAddress.svelte-4wct7d{min-width:300px}.shops-list.svelte-1r0kiu{list-style-type:none;margin-left:0;padding-left:0}.invisibleNumberOfShops.svelte-1r0kiu{display:none}/* required styles */
+.container.svelte-4wct7d{flex-direction:row;justify-content:space-between}.data_list.svelte-4wct7d{list-style:none;display:inline-block}.button.svelte-4wct7d{background-color:transparent;border:3px solid purple}.inputAddress.svelte-4wct7d{min-width:300px}.shops-list.svelte-1r0kiu{list-style-type:none;margin-left:0;padding-left:0}.invisibleNumberOfShops.svelte-1r0kiu{display:none}.shopBlock.svelte-1vp5cp1{box-shadow:0 1px 2px 0 rgba(0,0,0,0.2);padding:5px 10px;margin-right:20px;border-radius:6px;font-size:18px}.containerShopBlock.svelte-1vp5cp1{display:flex;flex-direction:row;flex-wrap:wrap}.address.svelte-1vp5cp1{color:#A9A9A9;font-size:15px}.city.svelte-1vp5cp1{margin-top:25px;margin-bottom:5px}/* required styles */
 
 .leaflet-pane,
 .leaflet-tile,
@@ -638,4 +638,3 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	margin-left: -12px;
 	border-right-color: #fff;
 	}
-.shopBlock.svelte-1vp5cp1{box-shadow:0 1px 2px 0 rgba(0,0,0,0.2);padding:5px 10px;margin-right:20px;border-radius:6px;font-size:18px}.containerShopBlock.svelte-1vp5cp1{display:flex;flex-direction:row;flex-wrap:wrap}.address.svelte-1vp5cp1{color:#A9A9A9;font-size:15px}.city.svelte-1vp5cp1{margin-top:25px;margin-bottom:5px}
