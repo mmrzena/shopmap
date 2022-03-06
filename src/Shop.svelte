@@ -5,18 +5,14 @@
 
 <style>
 	.shopBlock {
-		/* border: 1px solid red; */
-		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
-  	/* transition: 0.3s; */
-		padding: 5px 10px;
-		margin-right: 20px;
-		border-radius: 6px;
+		border-right: 1px solid #e2e2e2;
+		padding-right: 30px;
+		margin-right: 30px;
 		font-size: 18px;
 	}
 
-	.shopBlock:hover {
-		/* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	 */
+	.shopBlock:last-child {
+		border: none;
 	}
 
 	.containerShopBlock {
