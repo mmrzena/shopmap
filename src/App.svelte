@@ -36,9 +36,9 @@ if (hasDiv) {
 		markers.push(marker)
 	}
 	// load a tile layer
-	L.tileLayer('https://mapserver.mapy.cz/turist-m/{z}-{x}-{y}',
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{
-		attribution: '<a href="https://o.seznam.cz/">© Seznam.cz, a.s.</a> a OpenStreetMap',
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 		maxZoom: 18,
 		minZoom: 8,
 	}).addTo(myMap);
